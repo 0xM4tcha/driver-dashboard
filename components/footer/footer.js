@@ -1,21 +1,20 @@
 import styles from './footer.module.css';
-import ArrowPrevIcon from '../../public/arrow-prev-icon.png';
-import ArrowNextIcon from '../../public/arrow-next-icon.png';
-import Image from 'next/image';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 
 export default function footer() {
   return (
     <div className={styles.container}>
       <div className={styles.row}>
         <div>
-          <Image src={ArrowPrevIcon} alt="prev icon" width={10} height={10} />
+          <FontAwesomeIcon icon={faAngleLeft} />
         </div>
         <div>Previous Page</div>
       </div>
       <div className={styles.row}>
         <div>Next Page</div>
         <div>
-          <Image src={ArrowNextIcon} alt="next icon" width={10} height={10} />
+          <FontAwesomeIcon icon={faAngleRight} />
         </div>
       </div>
     </div>

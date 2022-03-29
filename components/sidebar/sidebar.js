@@ -1,27 +1,25 @@
 import styles from './sidebar.module.css';
-import Image from 'next/image';
-import HomeIcon from '../../public/home-icon.png';
-import CalendarIcon from '../../public/calendar-icon.png';
-import ProfileIcon from '../../public/profile-icon.png';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faHome, faUserCircle, faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
 
 export default function sidebar() {
   return (
     <div className={styles.sidebar}>
       <div className={styles.list}>
         <div style={{ marginRight: '10px' }}>
-          <Image src={HomeIcon} alt="home icon" width={20} height={20} />
+          <FontAwesomeIcon icon={faHome} />
         </div>
         <p>Beranda</p>
       </div>
       <div className={styles.list}>
         <div style={{ marginRight: '10px' }}>
-          <Image src={ProfileIcon} alt="home icon" width={20} height={20} />
+          <FontAwesomeIcon icon={faUserCircle} />
         </div>
         <p>Driver Management</p>
       </div>
       <div className={styles.list}>
         <div style={{ marginRight: '10px' }}>
-          <Image src={CalendarIcon} alt="home icon" width={20} height={20} />
+          <FontAwesomeIcon icon={faCalendarAlt} />
         </div>
         <p>Pickup</p>
       </div>

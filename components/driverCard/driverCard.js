@@ -1,7 +1,6 @@
 import styles from "./driverCard.module.css";
-import ProfileIcon from "../../public/profile-icon.png";
-import MoreIcon from '../../public/more-icon.png';
-import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faEllipsisH, faUserCircle } from '@fortawesome/free-solid-svg-icons'
 
 export default function driverCard() {
   return (
@@ -11,13 +10,13 @@ export default function driverCard() {
           Driver Id <span style={{ color: "#f7454d" }}>123</span>
         </div>
         <div>
-          <Image src={MoreIcon} alt="profile image" width={10} height={10} />
+          <FontAwesomeIcon icon={faEllipsisH} />
         </div>
       </div>
       <hr />
       <div className={styles.body}>
         <div className={styles.image}>
-          <Image src={ProfileIcon} alt="profile image" width={65} height={65} />
+          <FontAwesomeIcon icon={faUserCircle} size="4x" />
         </div>
         <div className={styles.description}>
           <div className={styles.infoSection}>
