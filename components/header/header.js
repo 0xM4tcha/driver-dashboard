@@ -1,8 +1,14 @@
 import styles from './header.module.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faSearch, faPlus } from '@fortawesome/free-solid-svg-icons'
+import { useDrivers } from 'store/driver';
 
 export default function header() {
+  const { setFilter, filter } = useDrivers();
+
+  const handleSearch = (e) => {
+    setFilter(e.target.value)
+  }
   return (
     <div className={styles.header}>
       <div className={styles.leftSection}>
@@ -14,7 +20,7 @@ export default function header() {
           <div className={styles.search}>
             <FontAwesomeIcon icon={faSearch} />
           </div>
-          <input className={styles.input} placeholder='cari driver'></input>
+          <input value={filter} onChange={(e) => handleSearch(e)} className={styles.input} placeholder='cari driver'></input>
         </div>
         <div className={styles.button}>
           <div className={styles.labelButton}>Tambah Driver</div>

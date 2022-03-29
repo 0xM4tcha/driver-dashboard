@@ -4,7 +4,7 @@ import Sidebar from "../sidebar/sidebar";
 import Header from "../header/header";
 import styles from "./layout.module.css";
 
-export default function Layout({ children }) {
+export default function Layout({ children }) {	
   return (
     <>
       <Navbar />

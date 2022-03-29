@@ -3,10 +3,22 @@
     flex-direction: row;
     justify-content: space-evenly;
 }
-.row {
+
+.next {
     display: flex;
     flex-direction: row;
-}
-.row:hover {
     cursor: pointer;
+}
+
+.prev {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}
+
+.disabled {
+    display: flex;
+    flex-direction: row;
+    pointer-events: none;
+    color: grey;
 }
