@@ -1,8 +1,14 @@
-.container {
+.listContainer {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    /* white-space: nowrap; */
+    white-space: nowrap;
+    overflow: scroll;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
 }
 
 .cardWrapper {
@@ -10,7 +16,7 @@
 }
 
 @media only screen and (max-width: 375px) {
-    .container {
+    .listContainer {
         flex-direction: column;
     }
     .cardWrapper {

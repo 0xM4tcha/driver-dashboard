@@ -4,7 +4,6 @@ import { MENU } from '../../constants/menu'
 import { useState } from 'react';
 
 export default function sidebar() {
-
   const [ selectedMenu, setSelectedMenu ] = useState(1);
 
   return (

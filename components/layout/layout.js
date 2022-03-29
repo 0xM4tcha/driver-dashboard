@@ -13,9 +13,11 @@ export default function Layout({ children }) {
 					<Sidebar />
 				</div>
 				<div className={styles.rightSection}>
-					<Header />
-					<div style={{ paddingTop: '10px' }}>
-						<main>{children}</main>
+					<div>
+						<Header />
+						<div style={{ paddingTop: '10px' }}>
+							<main>{children}</main>
+						</div>
 					</div>
 					<div style={{ paddingTop: '10px' }}>
 						<Footer />

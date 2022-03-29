@@ -6,7 +6,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars, faTimes, faUserCircle } from '@fortawesome/free-solid-svg-icons'
 import Image from 'next/image'
 
-
 export default function navbar() {
 
   const [isShowSidebar, setShowSidebar] = useState(false);
