@@ -1,0 +1,51 @@
+.navbar {
+	height: 50px;
+	background-color: #fff;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding-left: 10px;
+	padding-right: 10px;
+	position: fixed;
+	width: 100%;
+	z-index: 2;
+}
+
+.leftSection {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.rightSection {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.rightTitle {
+	margin-right: 5px;
+}
+
+.sidebar {
+	position: fixed;
+	margin-top: 40px;
+	width: 100%;
+	z-index: 1;
+}
+
+.menu {
+	display: none;
+}
+
+@media only screen and (max-width: 375px) {
+  .rightTitle {
+		display: none;
+	}
+	.menu {
+		display: block;
+	}
+}
