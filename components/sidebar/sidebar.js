@@ -1,28 +1,28 @@
 import styles from './sidebar.module.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faHome, faUserCircle, faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
+import { MENU } from '../../constants/menu'
+import { useState } from 'react';
 
 export default function sidebar() {
+
+  const [ selectedMenu, setSelectedMenu ] = useState(1);
+
   return (
     <div className={styles.sidebar}>
-      <div className={styles.list}>
-        <div style={{ marginRight: '10px' }}>
-          <FontAwesomeIcon icon={faHome} />
-        </div>
-        <p>Beranda</p>
-      </div>
-      <div className={styles.list}>
-        <div style={{ marginRight: '10px' }}>
-          <FontAwesomeIcon icon={faUserCircle} />
-        </div>
-        <p>Driver Management</p>
-      </div>
-      <div className={styles.list}>
-        <div style={{ marginRight: '10px' }}>
-          <FontAwesomeIcon icon={faCalendarAlt} />
-        </div>
-        <p>Pickup</p>
-      </div>
+      {
+        MENU.map((menu, idx) => {
+          const { id, icon, label } = menu;
+          const color = selectedMenu === id ? 'red' : 'black';
+          return (
+            <div key={idx} className={styles.list} onClick={() => setSelectedMenu(id)}>
+              <div style={{ marginRight: '10px' }}>
+                <FontAwesomeIcon icon={icon} color={color} />
+              </div>
+              <p style={{ color }}>{ label }</p>
+            </div>
+          )
+        })
+      }
     </div>
   )
 }
