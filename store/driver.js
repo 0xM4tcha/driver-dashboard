@@ -1,8 +1,8 @@
-import { useState, useEffect, useMemo, createContext, useContext } from "react";
+import { useState, useMemo, createContext, useContext } from "react";
 import transformDriver from '../utils/transform/driver';
 
-export async function getServerSideProps() {
-  const page = 1;
+export async function getServerSideProps(context) {
+	const { query: { page } } = context;
   const res = await fetch(`https://randomuser.me/api/?page=${page}&results=5&seed=abc`)
   const resJson = await res.json()
   const drivers = transformDriver(resJson.results);
@@ -12,7 +12,7 @@ export async function getServerSideProps() {
   }
 }
 
-const useDriversController = (drivers) => {
+const useDriversController = ( drivers ) => {
 	const [ filter, setFilter ] = useState('');
 
 	const filteredDrivers = useMemo(

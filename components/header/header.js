@@ -1,14 +1,8 @@
 import styles from './header.module.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faSearch, faPlus } from '@fortawesome/free-solid-svg-icons'
-import { useDrivers } from 'store/driver';
 
-export default function header() {
-  const { setFilter, filter } = useDrivers();
-
-  const handleSearch = (e) => {
-    setFilter(e.target.value)
-  }
+export default function header({ filter, handleSearch }) {
   return (
     <div className={styles.header}>
       <div className={styles.leftSection}>
