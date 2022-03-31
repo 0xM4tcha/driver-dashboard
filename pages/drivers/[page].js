@@ -1,6 +1,5 @@
 import DriverCard from "../../components/driverCard/driverCard";
 import styles from './drivers.module.css';
-import NotFound from "../../components/notFound/notFound";
 import Head from "next/head";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
@@ -47,7 +46,7 @@ export default function Drivers() {
           <div className={styles.drivers}>
             {
               drivers.length < 1 ? 
-              ( <NotFound /> ) : 
+              ( <div className="notFound">no drivers found</div> ) : 
               (
                 drivers.map((driver, idx) => {
                   return (

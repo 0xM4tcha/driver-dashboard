@@ -14,7 +14,7 @@ export default function navbar() {
     <div>
       <div className={styles.navbar}>
         <div className={styles.leftSection} style={{ flex: 0.23 }}>
-          <div className={styles.menu} onClick={() => setShowSidebar(!isShowSidebar)}>
+          <div data-testid="menu-button" className={styles.menu} onClick={() => setShowSidebar(!isShowSidebar)}>
             <FontAwesomeIcon icon={isShowSidebar ? faTimes : faBars} />
           </div>
           <Image src={ShipperIcon} alt="shipper icon" width={50} height={15} />

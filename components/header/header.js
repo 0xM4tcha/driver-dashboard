@@ -14,9 +14,9 @@ export default function header({ filter, handleSearch }) {
           <div className={styles.search}>
             <FontAwesomeIcon icon={faSearch} />
           </div>
-          <input value={filter} onChange={(e) => handleSearch(e)} className={styles.input} placeholder='cari driver'></input>
+          <input data-testid="input-search" value={filter} onChange={(e) => handleSearch(e)} className={styles.input} placeholder='cari driver'></input>
         </div>
-        <div className={styles.button}>
+        <div role="button" className={styles.button}>
           <div className={styles.labelButton}>Tambah Driver</div>
           <div className={styles.plusIcon}>
             <FontAwesomeIcon icon={faPlus} />
